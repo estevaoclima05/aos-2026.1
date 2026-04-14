@@ -4,8 +4,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: 'postgres',
-    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }
+  dialect: "postgres",
+  protocol: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
+  dialectModule: require("pg"),
 });
 
 const Tarefa = sequelize.define('Tarefa', {
