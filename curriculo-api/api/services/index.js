@@ -1,4 +1,11 @@
-export * as usuarioService from './usuarioService.js';
-export * as academicaService from './academicaService.js';
-export * as profissionalService from './profissionalService.js';
-export * as projetoService from './projetoService.js';
+import * as usuarioService from './usuarioService.js';
+import * as academicaService from './academicaService.js';
+import * as profissionalService from './profissionalService.js';
+import * as projetoService from './projetoService.js';
+
+export {
+  usuarioService,
+  academicaService,
+  profissionalService,
+  projetoService
+};
